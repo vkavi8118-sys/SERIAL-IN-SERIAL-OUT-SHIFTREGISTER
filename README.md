@@ -1,5 +1,5 @@
-# SERIAL-IN-SERIAL-OUT-SHIFTREGISTER
-
+`# SERIAL-IN-SERIAL-OUT-SHIFTREGISTER
+DATE:11.12.2025
 **AIM:**
 
 To implement  SISO Shift Register using verilog and validating their functionality using their functional tables
@@ -7,8 +7,6 @@ To implement  SISO Shift Register using verilog and validating their functionali
 **SOFTWARE REQUIRED:**
 
 Quartus prime
-
-**THEORY**
 
 **SISO shift Register**
 
@@ -28,15 +26,32 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 /* write all the steps invloved */
 
 **PROGRAM**
+module DE5(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:
+Developed by:Kavinaya V RegisterNumber:25017974
 
 */
 
 **RTL LOGIC FOR SISO Shift Register**
+<img width="1920" height="1080" alt="Screenshot (102)" src="https://github.com/user-attachments/assets/96906dfa-e804-4397-a8a2-e6f786599ece" />
 
 **TIMING DIGRAMS FOR SISO Shift Register**
+<img width="1920" height="1080" alt="Screenshot (103)" src="https://github.com/user-attachments/assets/000e6229-5687-464c-9083-5b721226b7ab" />
 
 **RESULTS**
+Thus, the program has been executed successfully.
+`
